@@ -1,0 +1,13 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: YOUR_CLIENT_ID
+            client-secret: YOUR_CLIENT_SECRET
+            scope: email,profile
+
+logging:
+  level:
+    org.springframework.security: DEBUG
