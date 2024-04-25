@@ -16,7 +16,7 @@ public class SecurityConfig {
         http
                 .csrf().disable()
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/", "/home").permitAll()
+                        .antMatchers("/", "/home").permitAll()
                         .anyRequest().authenticated()
                 )
                 .oauth2Login()
@@ -31,4 +31,5 @@ public class SecurityConfig {
 
         return http.build();
     }
+
 }
