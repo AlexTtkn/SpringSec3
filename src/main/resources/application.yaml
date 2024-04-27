@@ -3,10 +3,21 @@ spring:
     oauth2:
       client:
         registration:
-          google:
-            client-id: YOUR_CLIENT_ID
-            client-secret: YOUR_CLIENT_SECRET
-            scope: email,profile
+          github:
+            client-id: 71c0078257ac8bfd32d4
+            client-secret: 6a8bda7b36219cd4005babf4e53c2d17fca36b47
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: ${JDBC_DATABASE_PASSWORD:password}
+    username: ${JDBC_DATABASE_USERNAME:sasha}
+    url: ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/db}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 logging:
   level:

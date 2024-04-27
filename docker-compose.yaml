@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  stats-db:
+    image: postgres:14-alpine
+    container_name: stats-postgres
+
+    ports:
+      - "5432:5432"
+    restart: on-failure
+    environment:
+      - POSTGRES_DB=db
+      - POSTGRES_USER=sasha
+      - POSTGRES_PASSWORD=password

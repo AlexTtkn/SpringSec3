@@ -1,24 +1,14 @@
 package com.example.demo.controller;
 
-import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HomeController {
 
-    @GetMapping("/")
-    public String home() {
-        return "index"; // Страница приветствия
+    @GetMapping("/home2")
+    public String get() {
+        return "Admin";
     }
 
-    @GetMapping("/profile")
-    public String profile(Model model, OAuth2AuthenticationToken authentication) {
-        var principal = authentication.getPrincipal();
-        var attributes = principal.getAttributes();
-        model.addAttribute("name", attributes.get("name"));
-        model.addAttribute("email", attributes.get("email"));
-        return "profile"; // Страница профиля
-    }
 }
