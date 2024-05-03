@@ -5,9 +5,9 @@ services:
     container_name: stats-postgres
 
     ports:
-      - "5432:5432"
+      - "5433:5432"
     restart: on-failure
     environment:
       - POSTGRES_DB=db
-      - POSTGRES_USER=sasha
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test

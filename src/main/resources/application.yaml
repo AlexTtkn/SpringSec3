@@ -8,9 +8,9 @@ spring:
             client-secret: 6a8bda7b36219cd4005babf4e53c2d17fca36b47
   datasource:
     driver-class-name: org.postgresql.Driver
-    password: ${JDBC_DATABASE_PASSWORD:password}
-    username: ${JDBC_DATABASE_USERNAME:sasha}
-    url: ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/db}
+    username: test
+    password: test
+    url: jdbc:postgresql://localhost:5433/db
   jpa:
     show-sql: true
     hibernate:
